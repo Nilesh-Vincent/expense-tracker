@@ -12,3 +12,9 @@ body {
 code {
   font-family: raleway, sans-serif;
 }
+
+@media (max-width: 800px) {
+  .mobile {
+    display: none;
+  }
+}

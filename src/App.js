@@ -21,13 +21,21 @@ function App() {
     setAddExpenseModalBudgetId(budgetId);
   }
 
+  console.log(budgets);
+
   return (
     <>
       <Container className="my-4">
-        <Stack direction="horizontal" gap="2" className="mb-4">
+        <center className="mb-4">
           <h1 className="me-auto">
             Expense <span className="text-light">Tracker</span>
           </h1>
+        </center>
+        <Stack
+          direction="horizontal"
+          gap="2"
+          className="mb-4 justify-content-center"
+        >
           <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
             Add Credit Limit
           </Button>
@@ -35,6 +43,12 @@ function App() {
             Add Expense
           </Button>
         </Stack>
+        {budgets.length === 0 && (
+          <p className="fs-3 fw-bolder text-center">
+            Click <span className="text-primary"> Add Credit Limit </span>
+            To Start
+          </p>
+        )}
         <div
           style={{
             display: "grid",
